@@ -31,7 +31,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
   cors: {
-    origin: "https://perchatroom.vercel.app",
+    origin: "http://localhost:3000",
     credentials: true,
   },
 });
