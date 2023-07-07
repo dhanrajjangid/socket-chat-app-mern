@@ -8,7 +8,11 @@ const messageRoute = require("./routes/messagesRoute");
 const socket = require("socket.io");
 
 dotenv.config();
-app.use();
+app.use(
+  cors({
+    origin: "https://perchatroom.vercel.app",
+  })
+);
 
 app.use(express.json());
 
