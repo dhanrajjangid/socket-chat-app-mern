@@ -1,4 +1,4 @@
-export const host = "https://mern-socket-chat-server.vercel.app/index.js";
+export const host = "https://mern-socket-chat-server.vercel.app";
 export const registerRoute = `${host}/api/auth/register`;
 export const loginRoute = `${host}/api/auth/login`;
 export const setAvatarRoute = `${host}/api/auth/setAvatar`;
