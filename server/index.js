@@ -8,7 +8,14 @@ const messageRoute = require("./routes/messagesRoute");
 const socket = require("socket.io");
 
 dotenv.config();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://perchatroom.vercel.app/login",
+    headers: ["Content-Type"],
+    credentials: true,
+  })
+);
+
 app.use(express.json());
 
 app.use("/api/auth", userRoutes);
@@ -31,7 +38,7 @@ const server = app.listen(process.env.PORT, () => {
 
 const io = socket(server, {
   cors: {
-    origin: "http://localhost:3000",
+    origin: "https://perchatroom.vercel.app/login",
     credentials: true,
   },
 });
